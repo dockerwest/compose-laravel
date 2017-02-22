@@ -55,7 +55,7 @@ PHPVERSION=7.1
 NGINXVERSION=stable
 BASEHOST=application.dev
 MYSQL_ROOT_PASSWORD=toor
-APPLICATION=../aaplication
+APPLICATION=../application
 DEVELOPMENT=noprofile
 ~~~
 
@@ -101,6 +101,8 @@ Helpers
 -------
 
 `TODO explain what the helpers do`
+
+### artisan
 
 ### composer
 
