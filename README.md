@@ -1,7 +1,7 @@
 PHP basic developer environment
 ===============================
 
-Basic developer environment for Pimcore apps.
+Basic developer environment for Laravel 5 apps.
 
 Usage
 -----
@@ -53,9 +53,9 @@ C_UID=1000
 C_GID=1000
 PHPVERSION=7.1
 NGINXVERSION=stable
-BASEHOST=pimcore.dev
+BASEHOST=application.dev
 MYSQL_ROOT_PASSWORD=toor
-PIMCORE=../pimcore
+APPLICATION=../aaplication
 DEVELOPMENT=noprofile
 ~~~
 
@@ -68,26 +68,25 @@ find your local GID you can run `id -g`.
 ### PHPVERSION
 
 Choose your PHP version. To see which versions are available
-[here](https://github.com/BlackIkeEagle/docker-php-pimcore).
+[here](https://github.com/dockerwest/php).
 
 ### NGINXVERSION
 
 Choose what version of Nginx you want. To see which versions are available see
-[here](https://github.com/BlackIkeEagle/docker-nginx-pimcore)
+[here](https://github.com/dockerwest/nginx-laravel)
 
 ### BASEHOST
 
-This setting defines what the hostname will be you can browse your pimcore app.
-The example configuration will be give you `http://pimcore.dev`.
+This setting defines what the hostname will be you can browse your laravel app.
+The example configuration will be give you `http://application.dev`.
 
 ### MYSQL_ROOT_PASSWORD
 
 Choose whatever you want to use as default root password.
 
-### PIMCORE
+### APPLICATION
 
-A relative or absolute path to your pimcore code. this can be a checkout of
-  [pimcore](https://github.com/pimcore/pimcore).
+A relative or absolute path to your application code. this can be a checkout of any laravel project
 
 ### DEVELOPMENT
 
