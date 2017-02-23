@@ -23,6 +23,8 @@ export PATH
 
 sessionname=$(echo "$BASEHOST" | sed 's/[^a-zA-Z]//g');
 
+cd "$APPLICATION"
+
 if [ "$1" = "screen" ]; then
     screen -r $sessionname
     if [ "$?" -ne 0 ]; then
