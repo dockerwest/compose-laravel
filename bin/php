@@ -30,6 +30,6 @@ else
         -e DEVELOPMENT="$DEVELOPMENT" \
         -e C_UID=$C_UID \
         -e C_GID=$C_GID \
-        dockerwest/php:$PHPVERSION \
+        dockerwest/php-laravel:$PHPVERSION \
         php "$@"
 fi
