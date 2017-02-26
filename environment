@@ -37,4 +37,11 @@ elif [ "$1" = "tmux" ]; then
     else
         tmux a -t $sessionname
     fi
+elif [ "$1" = "byobu" ]; then
+    byobu -r $sessionname
+    if [ "$?" -ne 0 ]; then
+        byobu -S $sessionname
+    fi
+else
+    echo "run $0 [screen|tmux|byobu]"
 fi
