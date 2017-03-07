@@ -11,19 +11,19 @@ some difficulties you could experience using docker containers.
 
 If you want this easy helpers to be readily available for you you can use
 `environment` before you start. `environment` allows you to start your
-environment with an updated `PATH` and allows you to choose between `tmux` or
-`screen`
+environment with an updated `PATH` and allows you to choose between `tmux`,
+`screen` or `byobu`. You can also define a default in the .env file. 
 
-tmux environment
+explicit setting the window manager:
 
 ~~~ sh
-$ ./environment tmux
+$ ./environment [tmux|screen|byobu]
 ~~~
 
-screen environment
+using default window manager, defined in .env
 
 ~~~ sh
-$ ./environment screen
+$ ./environment
 ~~~
 
 When you are running in this environment all helpers are available in your path.
@@ -57,6 +57,7 @@ BASEHOST=application.dev
 MYSQL_ROOT_PASSWORD=toor
 APPLICATION=../application
 DEVELOPMENT=noprofile
+WINDOW_MANAGER=tmux
 ~~~
 
 ### C_UID / C_GID
@@ -96,6 +97,10 @@ profiling output of you application.
 
 To visualize your profiling output see
 [docker-compose-xhgui](https://github.com/BlackIkeEagle/docker-compose-xhgui)
+
+### WINDOW_MANAGER
+Set the default window manager when running the environment.
+Available options are: tmux, screen and byobu
 
 Helpers
 -------
