@@ -7,7 +7,7 @@ services:
       - DOMAIN_NAME=redis.${BASEHOST:-application.dev}
 
   mysql:
-    image: mariadb
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-toor}
       - DOMAIN_NAME=mysql.${BASEHOST:-application.dev}
