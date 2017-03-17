@@ -21,7 +21,7 @@ fi
 # running env?
 running=$(run ps | grep Up | wc -l)
 if [ $running -gt 0 ]; then
-    bin/run exec -T application gosu www-data php "$@"
+    bin/run exec application gosu www-data php "$@"
 else
     . share/init
 
