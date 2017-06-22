@@ -1,3 +1,25 @@
-#!/usr/bin/env sh
+#!/usr/bin/env python
 
-php artisan "$@"
+import os, sys, subprocess
+from environment import Environment
+
+currentpath = os.getcwd()
+composepath = os.path.abspath(os.path.dirname(sys.argv[0]) + '/../')
+
+env = Environment(composepath + '/.env')
+
+cmd = [
+    os.path.dirname(sys.argv[0]) + '/php',
+    'artisan'
+] + sys.argv[1:]
+
+p = subprocess.Popen(cmd)
+try:
+    p.wait()
+except KeyboardInterrupt:
+    try:
+       p.terminate()
+    except OSError:
+       pass
+    p.wait()
+
